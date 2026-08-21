@@ -1,0 +1,65 @@
+/* ==========================================================================
+   about.css - 施設についてページ専用スタイル
+   ========================================================================== */
+
+.concept__text-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.concept__paragraph {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.concept__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.concept__photo {
+  aspect-ratio: 16 / 10;
+  background-color: var(--color-border);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-m);
+  margin: 40px 0;
+}
+
+.gallery-main {
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-border);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-m);
+  margin-bottom: 32px;
+}
+
+.gallery-caption {
+  max-width: 560px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--color-text-sub);
+}
+
+.gallery-sub {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .gallery-sub {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.gallery-sub-item {
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-border);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-m);
+}

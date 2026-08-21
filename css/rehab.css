@@ -1,0 +1,107 @@
+/* ==========================================================================
+   rehab.css - リハビリ紹介ページ専用スタイル
+   ========================================================================== */
+
+.philosophy__text {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.pillars-diagram-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.technique-block {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .technique-block {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .technique-block--reverse .technique-block__image {
+    order: 2;
+  }
+}
+
+.technique-block__image {
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-border);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-m);
+}
+
+.technique-block__label {
+  color: var(--color-main-dark);
+  font-weight: var(--fw-black);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.technique-block__title {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.technique-block__items {
+  margin-bottom: 16px;
+}
+
+.technique-block__text {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.technique-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .technique-section {
+    padding-top: 104px;
+    padding-bottom: 104px;
+  }
+}
+
+.professionals__content {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .professionals__content {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+.professionals__image {
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-border);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-m);
+}
+
+.professionals__qualifications {
+  margin-bottom: 16px;
+}
+
+.professionals__text {
+  font-size: 15px;
+  color: var(--color-text);
+}

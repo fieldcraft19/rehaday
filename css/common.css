@@ -1,0 +1,672 @@
+/* ==========================================================================
+   common.css
+
+   【このファイルの役割】
+   ・サイト全体で使う「色」「フォント」「余白サイズ」などをCSS変数として一元管理する
+   ・ヘッダー・フッターなど、全ページ共通で使うパーツのスタイルをまとめる
+   ・ボタン・カードなど、複数ページで使い回す共通パーツのスタイルをまとめる
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS変数(デザイントークン)
+   -------------------------------------------------------------------------- */
+:root {
+  /* ---- 色(テラコッタ×ディープティールの配色) ---- */
+  --color-bg: #ffffff;
+  --color-bg-card: #fbf6ef;
+  --color-main: #e08e45;
+  --color-main-dark: #c36f2b;
+  --color-navy: #1f4b4a;
+  --color-navy-light: #2c6663;
+  --color-text: #33352f;
+  --color-text-sub: #7a7568;
+  --color-border: #e8dfd0;
+
+  /* ---- フォント ----
+     本文はNoto Sans JP、見出しは丸みのあるZen Kaku Gothic Newを使い、
+     見出し/本文で書体そのものにも差をつける。 */
+  --font-family-base: "Noto Sans JP", sans-serif;
+  --font-family-heading: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* ---- 角丸(オリジナルよりやや大きめの角丸で柔らかい印象に) ---- */
+  --radius-s: 10px;
+  --radius-m: 18px;
+
+  /* ---- レイアウト ---- */
+  --container-width: 1120px;
+  --container-padding: 24px;
+
+  --section-padding-sp: 80px;
+  --section-padding-pc: 140px;
+
+  --header-height: 64px;
+}
+
+/* --------------------------------------------------------------------------
+   2. 基本スタイル
+   -------------------------------------------------------------------------- */
+body {
+  font-family: var(--font-family-base);
+  font-weight: var(--fw-regular);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--fw-black);
+  color: var(--color-navy);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   3. 共通レイアウトパーツ
+   -------------------------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section {
+  padding-top: var(--section-padding-sp);
+  padding-bottom: var(--section-padding-sp);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: var(--section-padding-pc);
+    padding-bottom: var(--section-padding-pc);
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-heading__title {
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  .section-heading__title {
+    font-size: 36px;
+  }
+}
+
+/* シグネチャー要素:見出し下の曲線アクセント(色をメインカラーに合わせて変更) */
+.section-heading__line {
+  display: block;
+  width: 64px;
+  height: 12px;
+  margin: 16px auto 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 12'%3E%3Cpath d='M2 10 C 20 -4, 44 16, 62 2' stroke='%23E08E45' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* --------------------------------------------------------------------------
+   4. 共通ボタン
+   -------------------------------------------------------------------------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border-radius: var(--radius-s);
+  font-weight: var(--fw-bold);
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--main {
+  background-color: var(--color-main);
+  color: #ffffff;
+}
+
+.button--main:hover {
+  background-color: var(--color-main-dark);
+}
+
+.button--navy {
+  background-color: var(--color-navy);
+  color: #ffffff;
+}
+
+.button--navy:hover {
+  background-color: var(--color-navy-light);
+}
+
+.button--outline {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.button--outline:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.button--outline-navy {
+  background-color: transparent;
+  border: 2px solid var(--color-navy);
+  color: var(--color-navy);
+}
+
+.button--outline-navy:hover {
+  background-color: var(--color-navy);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   5. 共通カード
+   -------------------------------------------------------------------------- */
+
+.card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   6. ヘッダー
+   -------------------------------------------------------------------------- */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 100;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.is-scrolled {
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 1px 0 var(--color-border);
+}
+
+.header__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: var(--radius-s);
+  padding: 8px 14px;
+}
+
+.site-logo__image {
+  height: auto;
+  max-height: 42px;
+  width: auto;
+  max-width: 220px;
+}
+
+.header__nav-link,
+.header__menu-icon span {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.header.is-scrolled .header__nav-link {
+  color: var(--color-navy);
+}
+
+.header.is-scrolled .header__menu-icon span {
+  background-color: var(--color-navy);
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 22px;
+}
+
+.header__nav-link {
+  font-weight: var(--fw-medium);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.header__tel-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background-color: var(--color-main);
+  color: #ffffff !important;
+  font-weight: var(--fw-bold);
+  font-size: 13px;
+}
+
+.header__menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+}
+
+.header__menu-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+@media (min-width: 1220px) {
+  .header__nav {
+    display: block;
+  }
+
+  .header__menu-icon {
+    display: none;
+  }
+}
+
+.header__mobile-nav {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header__mobile-nav.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.header__mobile-nav-list {
+  padding: 16px var(--container-padding) 24px;
+}
+
+.header__mobile-nav-link {
+  display: block;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-weight: var(--fw-medium);
+  color: var(--color-navy);
+}
+
+@media (min-width: 1220px) {
+  .header__mobile-nav {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. フッター
+   -------------------------------------------------------------------------- */
+
+.footer {
+  background-color: var(--color-navy);
+  color: #ffffff;
+  padding: 64px 0 24px;
+}
+
+.footer__logo {
+  margin-bottom: 24px;
+}
+
+.footer__grid {
+  display: grid;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer__heading {
+  font-weight: var(--fw-bold);
+  font-size: 14px;
+  color: var(--color-main);
+  margin-bottom: 12px;
+}
+
+.footer__text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__map-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--color-main);
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.footer__nav-link {
+  display: block;
+  padding: 6px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin-bottom: 20px;
+}
+
+.footer__legal-links a {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer__copyright {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* ポートフォリオ用のサンプル表記(実在の施設ではないことを明示する) */
+.footer__disclaimer {
+  padding-top: 16px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   8. 共通ヒーロー(全ページのファーストビューの土台)
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero--fullscreen {
+  height: 100svh;
+  min-height: 560px;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(31, 75, 74, 0.78) 0%,
+    rgba(31, 75, 74, 0.28) 45%,
+    rgba(31, 75, 74, 0) 70%
+  );
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 64px;
+  width: 100%;
+}
+
+.hero__copy {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: var(--fw-black);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+
+@media (min-width: 768px) {
+  .hero__copy {
+    font-size: 40px;
+  }
+}
+
+.hero__lead {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+  font-weight: var(--fw-regular);
+  line-height: 1.7;
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 768px) {
+  .hero__lead {
+    font-size: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. 共通CTA(ネイビー背景の行動喚起セクション)
+   -------------------------------------------------------------------------- */
+
+.cta {
+  background-color: var(--color-navy);
+  color: #ffffff;
+  text-align: center;
+}
+
+.cta__title {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .cta__title {
+    font-size: 48px;
+  }
+}
+
+.cta__message {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.cta__tel-number {
+  display: block;
+  font-size: 26px;
+  font-weight: var(--fw-bold);
+  color: var(--color-main);
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .cta__tel-number {
+    font-size: 32px;
+  }
+}
+
+.cta__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (min-width: 480px) {
+  .cta__buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. 共通タグリスト
+   -------------------------------------------------------------------------- */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list li {
+  background-color: var(--color-bg-card);
+  color: var(--color-navy);
+  font-size: 13px;
+  font-weight: var(--fw-medium);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* --------------------------------------------------------------------------
+   11. 共通の情報カード(営業時間・送迎対応など)
+   -------------------------------------------------------------------------- */
+
+.business-hours {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .business-hours {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.business-hours-card {
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.business-hours-card__label {
+  font-size: 13px;
+  font-weight: var(--fw-bold);
+  color: var(--color-text-sub);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.business-hours-card__value {
+  font-size: 20px;
+  font-weight: var(--fw-bold);
+  color: var(--color-navy);
+}
+
+.notice-card {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-m);
+  padding: 24px 28px;
+  font-size: 14px;
+  color: var(--color-text-sub);
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   12. 共通お知らせリスト
+   -------------------------------------------------------------------------- */
+
+.news-list {
+  border-top: 1px solid var(--color-border);
+}
+
+.news-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.news-item__date {
+  font-size: 13px;
+  color: var(--color-text-sub);
+  font-feature-settings: "tnum";
+}
+
+.news-item__category {
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+  color: var(--color-navy);
+  background-color: var(--color-bg-card);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.news-item__title {
+  font-size: 15px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .news-item__title {
+    width: auto;
+    flex: 1;
+  }
+}

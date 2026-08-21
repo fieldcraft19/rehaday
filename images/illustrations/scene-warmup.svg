@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#FBF6EF"/>
+  <circle cx="140" cy="150" r="120" fill="#1F4B4A" opacity="0.08"/>
+  <circle cx="660" cy="460" r="140" fill="#E08E45" opacity="0.10"/>
+
+  <g transform="translate(400,320)" stroke="#1F4B4A" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="-140" r="38" fill="#E08E45" stroke="none"/>
+    <path d="M -90 -20 C -60 -60, -30 -70, 0 -70 C 30 -70, 60 -60, 90 -20"/>
+    <line x1="0" y1="-70" x2="0" y2="40"/>
+    <line x1="0" y1="40" x2="-50" y2="140"/>
+    <line x1="0" y1="40" x2="50" y2="140"/>
+  </g>
+  <text x="400" y="520" text-anchor="middle" font-family="'Zen Kaku Gothic New','Noto Sans JP',sans-serif" font-size="26" font-weight="700" fill="#1F4B4A">WARM UP</text>
+</svg>

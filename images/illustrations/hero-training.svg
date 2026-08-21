@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bgTraining" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1F4B4A"/>
+      <stop offset="100%" stop-color="#2C6663"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bgTraining)"/>
+  <circle cx="1350" cy="200" r="240" fill="#FBF6EF" opacity="0.06"/>
+  <circle cx="180" cy="720" r="200" fill="#E08E45" opacity="0.10"/>
+  <circle cx="1200" cy="740" r="120" fill="#FBF6EF" opacity="0.08"/>
+  <circle cx="260" cy="180" r="90" fill="#E08E45" opacity="0.09"/>
+
+  <!-- 筋力トレーニングのピクトグラム(ダンベル) -->
+  <g transform="translate(800,450)" stroke="#FBF6EF" stroke-width="18" stroke-linecap="round" opacity="0.92">
+    <line x1="-220" y1="0" x2="220" y2="0"/>
+    <rect x="-300" y="-70" width="90" height="140" rx="20" fill="#E08E45" stroke="none"/>
+    <rect x="210" y="-70" width="90" height="140" rx="20" fill="#E08E45" stroke="none"/>
+  </g>
+  <g transform="translate(800,450)" stroke="#FBF6EF" stroke-width="0" opacity="0.9">
+    <circle cx="0" cy="-190" r="46" fill="none" stroke="#FBF6EF" stroke-width="10"/>
+    <path d="M -18 -190 L -6 -175 L 20 -206" stroke="#E08E45" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

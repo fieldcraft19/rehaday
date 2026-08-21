@@ -1,0 +1,27 @@
+/* ==========================================================================
+   news.css - お知らせ一覧ページ専用スタイル
+   ========================================================================== */
+
+.news-hero {
+  background-color: var(--color-navy);
+  color: #ffffff;
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 56px;
+}
+
+.news-hero__title {
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.news-hero__note {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.news-page-list__wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}

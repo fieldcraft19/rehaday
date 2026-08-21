@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800">
+  <rect width="1000" height="800" fill="#FBF6EF"/>
+
+  <g stroke="#E8DFD0" stroke-width="4" fill="none">
+    <line x1="500" y1="170" x2="230" y2="590"/>
+    <line x1="500" y1="170" x2="770" y2="590"/>
+    <line x1="230" y1="590" x2="770" y2="590"/>
+  </g>
+
+  <!-- 鍛える -->
+  <g transform="translate(500,170)">
+    <circle r="120" fill="#1F4B4A"/>
+    <g transform="translate(0,-10)" stroke="#FBF6EF" stroke-width="12" stroke-linecap="round">
+      <line x1="-46" y1="0" x2="46" y2="0"/>
+      <rect x="-70" y="-20" width="24" height="40" rx="8" fill="#E08E45" stroke="none"/>
+      <rect x="46" y="-20" width="24" height="40" rx="8" fill="#E08E45" stroke="none"/>
+    </g>
+    <text y="60" text-anchor="middle" font-family="'Zen Kaku Gothic New','Noto Sans JP',sans-serif" font-size="30" font-weight="900" fill="#FBF6EF">鍛える</text>
+  </g>
+
+  <!-- 動きを変える -->
+  <g transform="translate(230,590)">
+    <circle r="120" fill="#C36F2B"/>
+    <g transform="translate(0,-14)" stroke="#FBF6EF" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M -40 20 C -40 -10, -20 -30, 0 -30 C 20 -30, 40 -10, 40 20"/>
+      <path d="M -50 30 L 50 30" stroke-dasharray="2 16"/>
+    </g>
+    <text y="60" text-anchor="middle" font-family="'Zen Kaku Gothic New','Noto Sans JP',sans-serif" font-size="28" font-weight="900" fill="#FBF6EF">動きを変える</text>
+  </g>
+
+  <!-- 整える -->
+  <g transform="translate(770,590)">
+    <circle r="120" fill="#2C6663"/>
+    <g transform="translate(0,-14)" stroke="#FBF6EF" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle r="34"/>
+      <path d="M -14 0 L -4 12 L 18 -14"/>
+    </g>
+    <text y="60" text-anchor="middle" font-family="'Zen Kaku Gothic New','Noto Sans JP',sans-serif" font-size="30" font-weight="900" fill="#FBF6EF">整える</text>
+  </g>
+
+  <text x="500" y="740" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="20" fill="#7A7568">3つの柱が連携し、一人ひとりに合わせたリハビリを実現します</text>
+</svg>

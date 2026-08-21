@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bgFacility" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C6663"/>
+      <stop offset="100%" stop-color="#1F4B4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bgFacility)"/>
+  <circle cx="220" cy="180" r="160" fill="#FBF6EF" opacity="0.06"/>
+  <circle cx="1420" cy="150" r="220" fill="#E08E45" opacity="0.10"/>
+  <circle cx="1300" cy="700" r="260" fill="#FBF6EF" opacity="0.05"/>
+  <circle cx="120" cy="740" r="140" fill="#E08E45" opacity="0.08"/>
+  <circle cx="760" cy="120" r="60" fill="#FBF6EF" opacity="0.10"/>
+  <circle cx="980" cy="760" r="90" fill="#FBF6EF" opacity="0.07"/>
+
+  <!-- シンプルな建物のピクトグラム(施設外観) -->
+  <g transform="translate(560,240)" stroke="#FBF6EF" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <rect x="0" y="120" width="480" height="260" rx="10"/>
+    <path d="M -30 120 L 240 -20 L 510 120" />
+    <rect x="60" y="190" width="70" height="70" rx="6"/>
+    <rect x="190" y="190" width="70" height="70" rx="6"/>
+    <rect x="320" y="190" width="70" height="70" rx="6"/>
+    <rect x="195" y="300" width="90" height="80" rx="6"/>
+    <line x1="240" y1="-20" x2="240" y2="-70"/>
+    <circle cx="240" cy="-88" r="16" fill="#E08E45" stroke="none"/>
+  </g>
+</svg>

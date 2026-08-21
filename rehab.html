@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リハビリ紹介｜Web制作実績サンプル｜リハビリデイ こもれび</title>
+  <meta name="description" content="【Web制作実績サンプル】架空のリハビリ特化型デイサービス「リハビリデイ こもれび」のリハビリ紹介ページです。マシントレーニング、レッドコード、個別リハビリ・マッサージを組み合わせた構成を想定したデモページです。">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/rehab.css">
+</head>
+<body>
+
+  <header class="header js-header">
+    <div class="container header__inner">
+
+      <a href="index.html" class="header__logo site-logo">
+        <img class="site-logo__image" src="images/common/logo.svg" alt="リハビリデイ こもれび">
+      </a>
+
+      <div class="header__right">
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li><a class="header__nav-link" href="index.html">ホーム</a></li>
+            <li><a class="header__nav-link" href="about.html">こもれびについて</a></li>
+            <li><a class="header__nav-link" href="rehab.html">リハビリ紹介</a></li>
+            <li><a class="header__nav-link" href="flow.html">1日の流れ</a></li>
+            <li><a class="header__nav-link" href="guide.html">ご利用について</a></li>
+            <li><a class="header__nav-link" href="contact.html">お問い合わせ・アクセス</a></li>
+          </ul>
+        </nav>
+
+        <a class="header__tel-button" href="tel:" data-site-tel-link>
+          📞 <span data-site="tel"></span>
+        </a>
+
+        <button class="header__menu-icon js-menu-button" aria-label="メニューを開く" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="header__mobile-nav js-mobile-nav">
+      <ul class="header__mobile-nav-list">
+        <li><a class="header__mobile-nav-link" href="index.html">ホーム</a></li>
+        <li><a class="header__mobile-nav-link" href="about.html">こもれびについて</a></li>
+        <li><a class="header__mobile-nav-link" href="rehab.html">リハビリ紹介</a></li>
+        <li><a class="header__mobile-nav-link" href="flow.html">1日の流れ</a></li>
+        <li><a class="header__mobile-nav-link" href="guide.html">ご利用について</a></li>
+        <li><a class="header__mobile-nav-link" href="contact.html">お問い合わせ・アクセス</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero__slide is-active js-rehab-hero-image"></div>
+
+      <div class="container hero__content">
+        <h1 class="hero__copy" data-rehab="hero.title"></h1>
+        <p class="hero__lead" data-rehab="hero.copy"></p>
+        <a class="button button--main" href="contact.html" data-site="ctaButtonPrimary"></a>
+      </div>
+    </section>
+
+    <section class="section philosophy">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-heading__title" data-rehab="philosophy.heading"></h2>
+          <span class="section-heading__line"></span>
+        </div>
+        <p class="philosophy__text" data-rehab="philosophy.text"></p>
+      </div>
+    </section>
+
+    <section class="section pillars-cycle-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-heading__title">3つの柱が連携するリハビリ</h2>
+          <span class="section-heading__line"></span>
+        </div>
+
+        <img class="pillars-diagram-image"
+             src="images/illustrations/pillars-diagram.svg"
+             alt="鍛える・動きを変える・整えるの3つの柱が連携し、一人ひとりに合わせた専門性の高いリハビリを実現することを示す図">
+      </div>
+    </section>
+
+    <section class="section technique-section">
+      <div class="container">
+        <div class="technique-block">
+          <div class="technique-block__image js-technique-image" data-technique-index="0"></div>
+          <div class="technique-block__body">
+            <p class="technique-block__label">01</p>
+            <h2 class="technique-block__title" data-rehab="techniques.0.title"></h2>
+            <ul class="technique-block__items tag-list js-technique-items" data-technique-index="0">
+            </ul>
+            <p class="technique-block__text" data-rehab="techniques.0.text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section technique-section">
+      <div class="container">
+        <div class="technique-block technique-block--reverse">
+          <div class="technique-block__image js-technique-image" data-technique-index="1"></div>
+          <div class="technique-block__body">
+            <p class="technique-block__label">02</p>
+            <h2 class="technique-block__title" data-rehab="techniques.1.title"></h2>
+            <ul class="technique-block__items tag-list js-technique-items" data-technique-index="1">
+            </ul>
+            <p class="technique-block__text" data-rehab="techniques.1.text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section technique-section">
+      <div class="container">
+        <div class="technique-block">
+          <div class="technique-block__image js-technique-image" data-technique-index="2"></div>
+          <div class="technique-block__body">
+            <p class="technique-block__label">03</p>
+            <h2 class="technique-block__title" data-rehab="techniques.2.title"></h2>
+            <ul class="technique-block__items tag-list js-technique-items" data-technique-index="2">
+            </ul>
+            <p class="technique-block__text" data-rehab="techniques.2.text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section professionals">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-heading__title" data-rehab="professionals.heading"></h2>
+          <span class="section-heading__line"></span>
+        </div>
+
+        <div class="professionals__content js-professionals-content">
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <h2 class="cta__title" data-site="ctaSectionTitle"></h2>
+        <p class="cta__message" data-site="ctaMessage"></p>
+        <span class="cta__tel-number" data-site="tel"></span>
+
+        <div class="cta__buttons">
+          <a class="button button--main" href="tel:" data-site-tel-link>電話する</a>
+          <a class="button button--outline" href="contact.html">営業時間・アクセスを見る</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer__logo site-logo">
+        <img class="site-logo__image" src="images/common/logo.svg" alt="リハビリデイ こもれび">
+      </div>
+
+      <div class="footer__grid">
+
+        <div>
+          <p class="footer__heading">営業時間・住所</p>
+          <p class="footer__text" data-site="businessHours"></p>
+          <p class="footer__text" data-site="address"></p>
+          <a class="footer__text footer__map-link" data-site-href="googleMapUrl" target="_blank" rel="noopener">
+            Googleマップで見る ▶
+          </a>
+          <p class="footer__text">
+            電話:<span data-site="tel"></span>
+          </p>
+        </div>
+
+        <div>
+          <p class="footer__heading">メニュー</p>
+          <a class="footer__nav-link" href="index.html">ホーム</a>
+          <a class="footer__nav-link" href="about.html">こもれびについて</a>
+          <a class="footer__nav-link" href="rehab.html">リハビリ紹介</a>
+          <a class="footer__nav-link" href="flow.html">1日の流れ</a>
+          <a class="footer__nav-link" href="guide.html">ご利用について</a>
+          <a class="footer__nav-link" href="contact.html">お問い合わせ・アクセス</a>
+          <a class="footer__nav-link" href="https://example.com/recruit/" target="_blank" rel="noopener">採用情報</a>
+        </div>
+
+      </div>
+
+      <div class="footer__legal-links">
+        <a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>
+        <a href="documents/unei-kitei.html" target="_blank" rel="noopener">運営規程(サンプル)</a>
+        <a href="documents/juuyoujikou.html" target="_blank" rel="noopener">重要事項説明書(サンプル)</a>
+      </div>
+
+      <p class="footer__copyright">&copy; 2026 リハビリデイ こもれび</p>
+      <p class="footer__disclaimer">※本サイトはWeb制作実績紹介用のサンプルです。施設名・住所・電話番号等はすべて架空のものであり、実在する施設・法人とは一切関係ありません。</p>
+
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/rehab.js"></script>
+
+</body>
+</html>

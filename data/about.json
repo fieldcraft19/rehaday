@@ -1,0 +1,37 @@
+{
+  "_comment": "【ポートフォリオ用ダミーデータ】施設についてページ用のサンプルコンテンツ。",
+
+  "hero": {
+    "title": "こもれびについて",
+    "copy": "1回3時間の短時間利用、無理なく通える場所です。",
+    "image": "images/illustrations/hero-facility.svg"
+  },
+
+  "concept": {
+    "heading": "無理なく、楽しく、安心して",
+    "paragraphs": [
+      "リハビリデイ こもれびは、1回3時間・お風呂やお食事のない短時間デイサービスです。長時間の利用が難しい方でも、生活のリズムを崩さず無理なく通っていただけます。",
+      "スタッフとのちょっとした会話や、他の利用者さまとの交流も通う楽しみのひとつです。<br>笑顔で過ごせる時間を大切にしています。",
+      "リハビリスタッフや看護資格を持つ専門職が体調を見守っていますので、初めての方でも安心してお過ごしいただけます。リハビリの詳しい内容は「リハビリ紹介」ページでご紹介しています。"
+    ],
+    "photo": "images/illustrations/concept-room.svg"
+  },
+
+  "gallery": {
+    "caption": "笑顔があふれる、あたたかい時間です。",
+    "mainImage": "images/illustrations/gallery-main.svg",
+    "subImages": [
+      "images/illustrations/scene-individual.svg",
+      "images/illustrations/concept-room.svg",
+      "images/illustrations/scene-warmup.svg"
+    ]
+  },
+
+  "businessHoursCards": [
+    { "label": "営業日", "value": "月曜日 〜 土曜日" },
+    { "label": "定休日", "value": "日曜日・祝日" },
+    { "label": "営業時間", "value": "9:00 〜 17:00" },
+    { "label": "送迎", "value": "近隣エリア送迎対応" },
+    { "label": "見学・体験", "value": "随時受付中" }
+  ]
+}

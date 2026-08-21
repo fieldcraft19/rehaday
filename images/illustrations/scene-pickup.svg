@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#FBF6EF"/>
+  <circle cx="130" cy="150" r="110" fill="#1F4B4A" opacity="0.08"/>
+  <circle cx="670" cy="460" r="140" fill="#E08E45" opacity="0.10"/>
+
+  <g transform="translate(400,330)" stroke="#1F4B4A" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M -230 20 L -190 -60 L 150 -60 L 230 20 Z" fill="#E08E45" stroke="none"/>
+    <rect x="-260" y="20" width="520" height="70" rx="16" fill="#C36F2B" stroke="none"/>
+    <circle cx="-150" cy="100" r="34" fill="#FBF6EF" stroke="#1F4B4A" stroke-width="10"/>
+    <circle cx="150" cy="100" r="34" fill="#FBF6EF" stroke="#1F4B4A" stroke-width="10"/>
+    <rect x="-140" y="-40" width="80" height="60" rx="8" fill="#FBF6EF" stroke="none" opacity="0.85"/>
+    <rect x="30" y="-40" width="80" height="60" rx="8" fill="#FBF6EF" stroke="none" opacity="0.85"/>
+  </g>
+  <text x="400" y="520" text-anchor="middle" font-family="'Zen Kaku Gothic New','Noto Sans JP',sans-serif" font-size="26" font-weight="700" fill="#1F4B4A">PICK UP</text>
+</svg>
