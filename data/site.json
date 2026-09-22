@@ -2,18 +2,18 @@
   "_comment": "【ポートフォリオ用ダミーデータ】このサイトはWeb制作実績紹介用のサンプルです。施設名・住所・電話番号などはすべて架空のものです。",
 
   "tel": "03-0000-0000",
-  "businessHours": "9:00〜17:00(日曜・祝日定休)",
+  "businessHours": "9:00〜17:00(日曜・祝日休み)",
   "openingHours": "9:00〜17:00",
-  "closedDays": "日曜日・祝日",
+  "closedDays": "日曜・祝日",
   "address": "サンプル県サンプル市中央1-2-3",
   "googleMapUrl": "https://www.google.com/maps",
 
-  "catchCopy": "住み慣れた毎日に、本格的なリハビリを。",
-  "catchCopySub": "専門職による個別プログラムと、本格的な運動療法。",
+  "catchCopy": "「できる」を増やす、短時間集中リハビリ。",
+  "catchCopySub": "国家資格者によるマンツーマン指導と、機能訓練に特化したプログラム。",
 
-  "ctaButtonPrimary": "無料体験・見学予約",
-  "ctaSectionTitle": "無料見学受付中",
-  "ctaMessage": "お気軽に見学・ご相談ください",
+  "ctaButtonPrimary": "無料体験・見学を予約する",
+  "ctaSectionTitle": "見学・体験、随時受付中",
+  "ctaMessage": "まずはお気軽にお問い合わせください",
 
   "currentStore": "けやき店",
   "stores": [
